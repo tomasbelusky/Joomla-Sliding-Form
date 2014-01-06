@@ -107,7 +107,8 @@
 					name="text"
 					type="text"
 					filter="safehtml"
-					label="MOD_SLIDING_FORM_FIELD_TEXT_LABEL" />
+					label="MOD_SLIDING_FORM_FIELD_TEXT_LABEL"
+          default="Contact us" />
 			</fieldset>
 		</fields>
 	</config>
