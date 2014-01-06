@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" method="upgrade">
+	<name>Sliding Form</name>
+	<author>Tomáš Beluský</author>
+	<creationDate>January 2014</creationDate>
+	<copyright>Copyright (C) 2014 Tomáš Beluský. All rights reserved.</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>tomasbelusky@gmail.com</authorEmail>
+	<version>1.0</version>
+	<files>
+		<filename module="mod_sliding_form">mod_sliding_form.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>mod_sliding_form.xml</filename>
+	</files>
+	<languages folder="languages">
+	  <language tag="en-GB">en-GB.mod_sliding_form.ini</language>
+	  <language tag="sk-SK">sk-SK.mod_sliding_form.ini</language>
+	  <language tag="cs-CZ">cs-CZ.mod_sliding_form.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="email"
+					type="text"
+					filter="safehtml"
+					label="MOD_SLIDING_FORM_FIELD_EMAIL_LABEL" />
+				<field
+					type="hidden"
+					name="sender_field"
+					default="require" />
+				<field
+					type="hidden"
+					name="message_field"
+					default="require" />
+				<field
+					name="name_field"
+					type="list"
+					label="MOD_SLIDING_FORM_FIELD_NAME"
+					default="no">
+	  				<option value="no">MOD_SLIDING_FORM_FIELD_OPTION_DONT_SHOW</option>
+            <option value="show">MOD_SLIDING_FORM_FIELD_OPTION_SHOW</option>
+            <option value="require">MOD_SLIDING_FORM_FIELD_OPTION_REQUIRE</option>
+				</field>
+				<field
+					name="subject_field"
+					type="list"
+					label="MOD_SLIDING_FORM_FIELD_SUBJECT"
+					default="no">
+            <option value="no">MOD_SLIDING_FORM_FIELD_OPTION_DONT_SHOW</option>
+            <option value="show">MOD_SLIDING_FORM_FIELD_OPTION_SHOW</option>
+            <option value="require">MOD_SLIDING_FORM_FIELD_OPTION_REQUIRE</option>
+				</field>
+				<field
+					name="default_subject"
+					type="text"
+					filter="safehtml"
+					label="MOD_SLIDING_FORM_FIELD_SUBJECT_DEFAULT" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="vertical"
+					type="radio"
+					label="MOD_SLIDING_FORM_FIELD_VERTICAL_LABEL"
+					default="bottom">
+						<option value="top">MOD_SLIDING_FORM_FIELD_OPTION_TOP</option>
+						<option value="bottom">MOD_SLIDING_FORM_FIELD_OPTION_BOTTOm</option>
+				</field>
+				<field
+					name="horizontal"
+					type="radio"
+					label="MOD_SLIDING_FORM_FIELD_HORIZONTAL_LABEL"
+					default="right">
+						<option value="left">MOD_SLIDING_FORM_FIELD_OPTION_LEFT</option>
+						<option value="right">MOD_SLIDING_FORM_FIELD_OPTION_RIGHT</option>
+				</field>
+				<field
+					name="width"
+					type="integer"
+					first="100"
+					last="500"
+					step="1"
+          default="200"
+					label="MOD_SLIDING_FORM_FIELD_WIDTH_LABEL" />
+				<field
+					name="border-radius"
+					type="integer"
+					first="0"
+					last="30"
+					step="1"
+          default="15"
+					label="MOD_SLIDING_FORM_FIELD_BORDER_RADIUS_LABEL" />
+				<field
+					name="font-color"
+					type="color"
+          default="#222222"
+					filter="safehtml"
+					label="MOD_SLIDING_FORM_FIELD_FONT_COLOR_LABEL" />
+				<field
+					name="background-color"
+					type="color"
+          default="#dddddd"
+					filter="safehtml"
+					label="MOD_SLIDING_FORM_FIELD_BACKGROUND_COLOR_LABEL" />
+				<field
+					name="text"
+					type="text"
+					filter="safehtml"
+					label="MOD_SLIDING_FORM_FIELD_TEXT_LABEL" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
